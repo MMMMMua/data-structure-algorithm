@@ -21,4 +21,11 @@ int main() {
 	List.output();
 	List.reverseBuild();
 	List.output();
+	List.remove(6);
+	List.output();
+	cout << List.getSize() << endl;
+	cout << List.find(13) << endl;
+	cout << List.find(6) << endl;
+	List.insert(20, 5);
+	List.output();
 }

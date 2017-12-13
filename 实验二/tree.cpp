@@ -126,15 +126,15 @@ string t;
 Tree<string> tree;
 
 int main() {
-	freopen("ex2_tree1.txt", "r", stdin);
+	freopen("ex2_tree1.txt", "r", stdin); // 打开文件
 	
-	while (cin >> n >> p >> t) {
-		if (t == "-1") {
-			tree.init(n);
+	while (cin >> n >> p >> t) { // 读入三个 string 类, 其实就是三个字符串,  string 类是字符串的一个封装, 和字符串非常相似. cin 函数会自动检测读入数据的类型
+		if (t == "-1") { // 如果读入的数是 "-1"
+			tree.init(n); // 说明这个树没有初始化, 新建一个节点. 设为根
 		}
 		else {
-			if (t == "L") {
-				tree.insert(n, p, 0);
+			if (t == "L") { // 如果一个点是另一点的左儿子
+				tree.insert(n, p, 0); // 剩下的不说了.
 			}
 			else {
 				tree.insert(n, p, 1);

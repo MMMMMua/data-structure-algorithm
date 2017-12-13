@@ -27,18 +27,22 @@ int main() {
 		int coef, powr;
 		
 		while (cin >> coef >> powr, powr >= 0) {
-			p1.orderedIns(pii(powr, coef));
+			if (coef != 0)
+				p1.orderedIns(pii(powr, coef));
 		}
 		
 		while (cin >> coef >> powr, powr >= 0) {
-			p2.orderedIns(pii(powr, coef));
+			if (coef != 0)
+				p2.orderedIns(pii(powr, coef));
 		}
 
 		Node<pii> *ptr1 = p1.head->succ, *ptr2 = p2.head->succ;
 
 		while (ptr1 != p1.tail && ptr2 != p2.tail) {
 			if (ptr1->val.fi == ptr2->val.fi) {
-				p3.orderedIns(pii(ptr2->val.fi, ptr1->val.se + ptr2->val.se));
+				if (ptr2->val.se + ptr1->val.se != 0)
+					p3.orderedIns(pii(ptr2->val.fi, ptr1->val.se + ptr2->val.se));
+				
 				ptr1 = ptr1->succ;
 				ptr2 = ptr2->succ;
 			} else if (ptr1->val.fi > ptr2->val.fi) {

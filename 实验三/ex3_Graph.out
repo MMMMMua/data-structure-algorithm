@@ -1,0 +1,7 @@
+a->b path:a,b value=3
+a->c path:a,c value=5
+a->d path:a,d value=2
+a->e path:a,c,e value=6
+a->f path:a,c,e,f value=7
+a->g path:a,c,g value=8
+a->h path:a,c,e,f,h value=9
